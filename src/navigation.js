@@ -8,12 +8,15 @@ export const headerData = {
     },
     {
       text: 'Услуги',
+      href: getPermalink('/services'),
     },
     {
       text: 'Цены',
+      href: getPermalink('/pricing'),
     },
     {
       text: 'Контакты',
+      href: getPermalink('/contact'),
     },
   ],
   actions: [{ text: 'Download', href: 'https://github.com/onwidget/astrowind', target: '_blank' }],
