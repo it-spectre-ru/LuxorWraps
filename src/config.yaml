@@ -1,22 +1,23 @@
 site:
   name: LuxorWraps
-  site: 'https://astrowind.vercel.app'
+  site: 'https://luxorwraps.moscow'
   base: '/'
   trailingSlash: false
 
   googleSiteVerificationId: orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M
+  metrikaId: 98262784
 
 # Default SEO metadata
 metadata:
   title:
-    default: AstroWind
-    template: '%s — AstroWind'
+    default: LuxorWraps
+    template: '%s — LuxorWraps.moscow'
   description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: AstroWind
+    site_name: LuxorWraps
     images:
       - url: '~/assets/images/default.png'
         width: 1200
@@ -28,7 +29,7 @@ metadata:
     cardType: summary_large_image
 
 i18n:
-  language: en
+  language: ru
   textDirection: ltr
 
 apps:
