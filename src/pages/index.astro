@@ -6,128 +6,48 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 
 import Features2 from '~/components/widgets/Features2.astro';
 import Features from '~/components/widgets/Features.astro';
-import Stats from '~/components/widgets/Stats.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
-import Brands from '~/components/widgets/Brands.astro';
 
-import { YouTube } from 'astro-embed';
+// import { YouTube } from 'astro-embed';
 
 const metadata = {
   title: 'Startup Landing Page',
 };
+
+const mainPageImage = '~/assets/images/mainPageImage.jpg';
 ---
 
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
 
   <Hero
-    tagline="Startup Web Demo"
+    image={{
+      src: mainPageImage,
+      alt: 'Click-through Landing Page Hero Image',
+    }}
+    tagline="Гарантия качества и долговечности"
     actions={[
       {
         variant: 'primary',
         target: '_blank',
-        text: 'Get templates',
+        text: 'Начать чат',
         href: 'https://github.com/onwidget/astrowind',
-        icon: 'tabler:download',
+        icon: 'tabler:brand-telegram',
       },
-      { text: 'Learn more', href: '#features' },
+      { text: 'Узнать цену', href: '#features' },
     ]}
   >
     <Fragment slot="title">
-      Improve <span class="hidden sm:inline">the online presence of</span> your <span
-        class="text-accent dark:text-white highlight">Startup</span
-      > with Astrowind templates
+      Оклейка полиуретановой (антигравийной) пленкой.<span class="hidden sm:inline"></span><span
+        class="text-accent dark:text-white highlight"></span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      Step into the spotlight with <span class="font-semibold">Astrowind</span> templates, your pathway to fortifying your
-      startup's digital footprint, fostering credibility, and expanding your reach.
-    </Fragment>
-
-    <Fragment slot="image">
-      <YouTube id="gxBkghlglTg" title="Astro just Launched.... Could it be the ultimate web framework?" />
-      <style is:inline>
-        lite-youtube {
-          margin: 0 auto;
-          max-width: 100%;
-        }
-      </style>
+      Профессиональная оклейка <span class="font-semibold">полиуретановой</span> (антигравийной) пленкой. Надежная защита
+      кузова от царапин, сколов и других повреждений.
     </Fragment>
   </Hero>
-
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="About us"
-    subtitle="We believe in the magic of turning dreams into stunning realities. Founded by passionate developers with a shared vision, we set out to simplify the website creation process. Our templates bring together the innovation of Astro 4.0 and the versatility of Tailwind CSS, enabling you to express your unique brand identity like never before."
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Features2>
-
-  <!-- Stats Widget ****************** -->
-
-  <Stats
-    title="Discover the impressive impact of Astrowind"
-    subtitle="The numbers below reflect the trust our users have placed in us and the remarkable outcomes we've helped them achieve."
-    stats={[
-      { title: 'Downloads', amount: '182K' },
-      { title: 'Websites Launched', amount: '87' },
-      { title: 'User Ratings', amount: '4.8' },
-      { title: 'Satisfied Clients', amount: '116K' },
-    ]}
-  />
-
-  <!-- Brands Widget ****************** -->
-
-  <Brands
-    title="Partnerships & Collaborations"
-    subtitle="At Astrowind, we believe in the power of collaboration to drive innovation and create exceptional experiences."
-    icons={[]}
-    images={[
-      {
-        src: 'https://cdn.pixabay.com/photo/2015/05/26/09/37/paypal-784404_1280.png',
-        alt: 'Paypal',
-      },
-      {
-        src: 'https://cdn.pixabay.com/photo/2021/12/06/13/48/visa-6850402_1280.png',
-        alt: 'Visa',
-      },
-      {
-        src: 'https://cdn.pixabay.com/photo/2013/10/01/10/29/ebay-189064_1280.png',
-        alt: 'Ebay',
-      },
-
-      {
-        src: 'https://cdn.pixabay.com/photo/2015/04/13/17/45/icon-720944_1280.png',
-        alt: 'Youtube',
-      },
-      {
-        src: 'https://cdn.pixabay.com/photo/2013/02/12/09/07/microsoft-80658_1280.png',
-        alt: 'Microsoft',
-      },
-      {
-        src: 'https://cdn.pixabay.com/photo/2015/04/23/17/41/node-js-736399_1280.png',
-        alt: 'Node JS',
-      },
-      {
-        src: 'https://cdn.pixabay.com/photo/2015/10/31/12/54/google-1015751_1280.png',
-        alt: 'Google',
-      },
-      {
-        src: 'https://cdn.pixabay.com/photo/2021/12/06/13/45/meta-6850393_1280.png',
-        alt: 'Meta',
-      },
-      {
-        src: 'https://cdn.pixabay.com/photo/2013/01/29/22/53/yahoo-76684_1280.png',
-        alt: 'Yahoo',
-      },
-    ]}
-  />
-
-  <!-- Features2 Widget ************** -->
 
   <Features2
     title="What services do we provide?"
