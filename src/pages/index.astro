@@ -5,7 +5,6 @@ import Hero from '~/components/widgets/Hero.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 import Features2 from '~/components/widgets/Features2.astro';
-import Features from '~/components/widgets/Features.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 
@@ -85,27 +84,33 @@ const mainPageImage = '~/assets/images/mainPageImage.jpg';
     items={[
       {
         title: 'Сколько времени занимает оклейка автомобиля пленкой?',
-        description: 'Оклейка автомобиля занимает от 1 до 3 дней в зависимости от модели и степени покрытия.',
+        description:
+          'Процесс оклейки занимает от 1 до 3 дней, в зависимости от модели автомобиля и выбранного уровня защиты (полная или частичная оклейка).',
       },
       {
-        title: 'Как долго служит полиуретановая пленка?',
-        description: 'Пленка служит 5-10 лет при правильном уходе и эксплуатации.',
+        title: 'Каков срок службы полиуретановой пленки?',
+        description:
+          'При правильном уходе полиуретановая пленка служит от 5 до 10 лет, сохраняя свою защитную функцию и первоначальный внешний вид.',
       },
       {
         title: 'Можно ли удалить пленку без повреждения краски?',
-        description: 'Да, пленка удаляется без повреждения лакокрасочного покрытия.',
+        description:
+          'Да, пленка легко снимается, не повреждая лакокрасочное покрытие автомобиля. Это обеспечивает сохранение заводского состояния кузова.',
       },
       {
         title: 'Требуется ли особый уход за пленкой?',
-        description: 'Нет, достаточно стандартной мойки, но лучше избегать агрессивных средств и жестких щеток.',
+        description:
+          'Для ухода за пленкой достаточно регулярной мойки автомобиля. Рекомендуется избегать агрессивных моющих средств и использования жестких щеток, чтобы продлить срок службы покрытия.',
       },
       {
         title: 'Какие части автомобиля нуждаются в защите больше всего',
-        description: 'Наибольшую защиту требуют капот, бампер, крылья и зеркала.',
+        description:
+          'Наибольшей защиты требуют такие элементы, как капот, бампер, передние крылья и зеркала, так как они чаще всего подвержены повреждениям от камней, гравия и других дорожных факторов.',
       },
       {
         title: 'Какие гарантии предоставляются на пленку и оклейку?',
-        description: 'Гарантия на пленку и оклейку составляет от 5 до 10 лет, в зависимости от производителя.',
+        description:
+          'Мы предоставляем гарантию от 5 до 10 лет на пленку и работу по ее нанесению. Точный срок зависит от выбранного бренда пленки и условий эксплуатации автомобиля.',
       },
     ]}
   >
@@ -117,46 +122,46 @@ const mainPageImage = '~/assets/images/mainPageImage.jpg';
   <!-- Features3 Widget ************** -->
 
   <Features3
-    title="Let us know how we can help"
-    subtitle="We’re here to help and answer any question you might have."
+    title="Свяжитесь с нами"
+    subtitle="Мы готовы помочь и ответить на любые ваши вопросы."
     columns={4}
     items={[
       {
-        title: 'Phone',
+        title: 'Телефон',
         icon: 'tabler:phone',
         callToAction: {
           target: '_blank',
-          text: 'Call us',
-          href: '/',
+          text: 'Позвоните нам',
+          href: 'tel:+7 (922) 8077855',
           variant: 'link',
         },
       },
       {
-        title: 'Email',
+        title: 'Электронная почта',
         icon: 'tabler:mail',
         callToAction: {
           target: '_blank',
-          text: 'Write to us',
+          text: 'Напишите нам',
           href: '/',
           variant: 'link',
         },
       },
       {
-        title: 'Chat with sales',
+        title: 'Чат с отделом продаж',
         icon: 'tabler:message-circle',
         callToAction: {
           target: '_blank',
-          text: 'Start chatting',
+          text: 'Начать чат',
           href: '/',
           variant: 'link',
         },
       },
       {
-        title: 'Chat with support',
+        title: 'Чат с поддержкой',
         icon: 'tabler:message-circle',
         callToAction: {
           target: '_blank',
-          text: 'Start chatting',
+          text: 'Начать чат',
           href: '/',
           variant: 'link',
         },
