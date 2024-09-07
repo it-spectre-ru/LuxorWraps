@@ -41,6 +41,6 @@ export const footerData = {
     { ariaLabel: 'Mail', icon: 'tabler:brand-vk', href: getAsset('/rss.xml') },
   ],
   footNote: `
-    Made by <a class="text-blue-600 underline dark:text-muted" href="https://LuxorWraps.moscow/"> LuxorWraps</a> · All rights reserved.
+    <a class="text-blue-600 underline dark:text-muted" href="https://LuxorWraps.moscow/"> LuxorWraps</a> 	&reg; Все права защищены.
   `,
 };
