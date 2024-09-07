@@ -12,7 +12,7 @@ metadata:
   title:
     default: LuxorWraps
     template: '%s — LuxorWraps.moscow'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+  description: '🚗 Профессиональная оклейка и бронирование автомобилей полиуретановой (антигравийной) пленкой в Москве. LuxorWraps.moscow предлагает надежную защиту кузова от царапин, сколов и внешних воздействий с гарантией качества до 10 лет.'
   robots:
     index: true
     follow: true
