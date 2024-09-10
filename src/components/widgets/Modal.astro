@@ -1,7 +1,3 @@
----
-
----
-
 <div id="modal" class="fixed inset-0 z-50 overflow-auto bg-black bg-opacity-40 flex items-center justify-center hidden">
   <div class="relative bg-white dark:bg-gray-800 w-full max-w-md m-auto flex-col flex rounded-lg shadow-lg">
     <div class="p-8">
@@ -94,38 +90,37 @@
     }
   }
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
     const formData = new FormData(event.target);
     const data = Object.fromEntries(formData.entries());
 
-    // Here you can handle the form data
     console.log('Form data:', data);
-    console.log('Form user name:', data.username);
-    console.log('Form email:', data.email);
 
-    // You can send the data to a server, update state, etc.
-    // For example, using fetch:
-    // fetch('/api/submit-form', {
-    //   method: 'POST',
-    //   headers: {
-    //     'Content-Type': 'application/json',
-    //   },
-    //   body: JSON.stringify(data),
-    // })
-    // .then(response => response.json())
-    // .then(result => {
-    //   console.log('Success:', result);
-    //   closeModal();
-    // })
-    // .catch(error => {
-    //   console.error('Error:', error);
-    // });
+    const url = `https://api.telegram.org/bot7020130723:AAE9ROdrdCVFTP8M3jpPcx4Qg_lMZjPTNj8/sendMessage`;
 
-    // For now, we'll just close the modal
-    const modal = document.getElementById('modal');
-    if (modal) {
-      modal.classList.add('hidden');
+    try {
+      const response = await fetch(url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          chat_id: '-1002345768014',
+          text: `Новое сообщение с сайта luxorwraps.moscow:\nUsername: ${data.username}\nEmail: ${data.email}`,
+        }),
+      });
+
+      if (response.ok) {
+        console.log('Form submitted successfully');
+        // You can add a success message or redirect here
+      } else {
+        console.error('Form submission failed');
+        // You can add an error message here
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      // You can add an error message here
     }
   }
 
