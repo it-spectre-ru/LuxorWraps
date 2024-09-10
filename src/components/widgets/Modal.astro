@@ -89,39 +89,46 @@
       }
 
       if (form) {
-        form.addEventListener('submit', (event) => {
-          event.preventDefault();
-          const formData = new FormData(form);
-          const data = Object.fromEntries(formData.entries());
-
-          // Here you can handle the form data
-          console.log('Form data:', data);
-
-          // You can send the data to a server, update state, etc.
-          // For example, using fetch:
-          // fetch('/api/submit-form', {
-          //   method: 'POST',
-          //   headers: {
-          //     'Content-Type': 'application/json',
-          //   },
-          //   body: JSON.stringify(data),
-          // })
-          // .then(response => response.json())
-          // .then(result => {
-          //   console.log('Success:', result);
-          //   closeModal();
-          // })
-          // .catch(error => {
-          //   console.error('Error:', error);
-          // });
-
-          // For now, we'll just close the modal
-          closeModal();
-        });
+        form.addEventListener('submit', handleSubmit);
       }
     }
   }
 
+  function handleSubmit(event) {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    const data = Object.fromEntries(formData.entries());
+
+    // Here you can handle the form data
+    console.log('Form data:', data);
+    console.log('Form user name:', data.username);
+    console.log('Form email:', data.email);
+
+    // You can send the data to a server, update state, etc.
+    // For example, using fetch:
+    // fetch('/api/submit-form', {
+    //   method: 'POST',
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //   },
+    //   body: JSON.stringify(data),
+    // })
+    // .then(response => response.json())
+    // .then(result => {
+    //   console.log('Success:', result);
+    //   closeModal();
+    // })
+    // .catch(error => {
+    //   console.error('Error:', error);
+    // });
+
+    // For now, we'll just close the modal
+    const modal = document.getElementById('modal');
+    if (modal) {
+      modal.classList.add('hidden');
+    }
+  }
+
+  // Run setup when the DOM is fully loaded
   document.addEventListener('DOMContentLoaded', setupModal);
-  setupModal();
 </script>
