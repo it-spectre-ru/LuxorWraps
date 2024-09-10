@@ -28,9 +28,9 @@ export const headerData = {
 export const footerData = {
   links: [
     {
-      title: 'Product',
+      title: 'Блог',
       links: [
-        { text: 'Features', href: '#' },
+        { text: 'Статьи', href: '/blog' },
       ],
     },
   ],
