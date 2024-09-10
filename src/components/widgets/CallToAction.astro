@@ -3,6 +3,7 @@ import WidgetWrapper from '../ui/WidgetWrapper.astro';
 import type { CallToAction, Widget } from '~/types';
 import Headline from '~/components/ui/Headline.astro';
 import Button from '~/components/ui/Button.astro';
+import Modal from '~/components/widgets/Modal.astro';
 
 interface Props extends Widget {
   title?: string;
@@ -45,7 +46,7 @@ const {
           {Array.isArray(actions) ? (
             actions.map((action) => (
               <div class="flex w-full sm:w-auto">
-                <Button {...(action || {})} class="w-full sm:mb-0" />
+                <Button {...(action || {})} class="w-full sm:mb-0" id="openModal" />
               </div>
             ))
           ) : (
@@ -55,4 +56,25 @@ const {
       )
     }
   </div>
+  <Modal />
 </WidgetWrapper>
+
+<script>
+  function setupModalTrigger() {
+    const openModalButton = document.getElementById('openModal');
+    const modal = document.getElementById('modal');
+
+    if (openModalButton && modal) {
+      openModalButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        modal.classList.remove('hidden');
+      });
+    }
+  }
+
+  // Run setup when the DOM is fully loaded
+  document.addEventListener('DOMContentLoaded', setupModalTrigger);
+
+  // Also run setup now in case the script runs after DOMContentLoaded
+  setupModalTrigger();
+</script>
