@@ -17,7 +17,7 @@ const { title, description } = Astro.props;
 
       <form id="modalForm" class="space-y-4">
         <div>
-          <label for="username" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Username</label>
+          <label for="username" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Ваше имя</label>
           <input
             type="text"
             id="username"
@@ -27,9 +27,11 @@ const { title, description } = Astro.props;
           />
         </div>
         <div>
-          <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Email</label>
+          <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+            >Как с Вами связаться (звонок, email, telegram)
+          </label>
           <input
-            type="email"
+            type="text"
             id="email"
             name="email"
             class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
@@ -43,13 +45,13 @@ const { title, description } = Astro.props;
             id="closeModal"
             class="px-4 py-2 bg-gray-200 text-gray-800 text-sm font-medium rounded-md shadow-sm hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400 transition-colors"
           >
-            Cancel
+            Отмена
           </button>
           <button
             type="submit"
             class="px-4 py-2 bg-blue-500 text-white text-sm font-medium rounded-md shadow-sm hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300 transition-colors"
           >
-            Submit
+            Отправить
           </button>
         </div>
       </form>

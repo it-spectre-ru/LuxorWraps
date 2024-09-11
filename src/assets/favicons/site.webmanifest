@@ -1,0 +1,21 @@
+{
+  "name": "luxorwraps.moscow",
+  "short_name": "luxorwraps.moscow",
+  "description": "Оклейка / Бронирование полиуретановой (антигравийной) пленкой автомобиля",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#487df9",
+  "theme_color": "#487df9",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
