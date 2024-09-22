@@ -1,0 +1,190 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Prices from '~/components/widgets/Pricing.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Цены на детейлинг в Москве',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <HeroText
+    tagline="Детейлинг"
+    title="Самые востребованные услуги"
+    subtitle="Рекомендуется посетить центр, чтобы оценить качество работы и пообщаться с мастерами."
+  />
+
+  <!-- Pricing Widget ******************* -->
+
+  <Prices
+    title="Наши цены"
+    subtitle="Платите только за то что нужно"
+    prices={[
+      {
+        title: 'Полировка + керамика',
+        subtitle: 'Средняя цена: 70.000 руб.',
+        price: 70000,
+        period: ' ',
+        items: [
+          {
+            description: 'Надежное керамическое покрытия',
+          },
+          {
+            description: '7 слоев покрытия',
+          },
+          {
+            description: 'Срок службы 10 лет',
+          },
+        ],
+        callToAction: {
+          target: '_blank',
+          text: 'Начать',
+          href: '#',
+        },
+      },
+      {
+        title: 'Химчистка салона',
+        subtitle: 'Средняя цена: 30.000 руб.',
+        price: 30000,
+        period: ' ',
+        items: [
+          {
+            description: 'Обработка паром',
+          },
+          {
+            description: 'Качественные средства',
+          },
+          {
+            description: 'Volutpat hac curabitur',
+          },
+        ],
+        callToAction: {
+          target: '_blank',
+          text: 'Начать',
+          href: '#',
+        },
+        hasRibbon: true,
+        ribbonTitle: 'popular',
+      },
+      {
+        title: 'Оклейка зон риска',
+        subtitle: 'Средняя цена: 140 000 руб.',
+        price: 120000,
+        period: ' ',
+        items: [
+          {
+            description: 'Пороги, бамперы, арки колес',
+          },
+          {
+            description: 'Aliquam habitasse malesuada',
+          },
+          {
+            description: 'Suspendisse sit amet blandit',
+          },
+        ],
+        callToAction: {
+          target: '_blank',
+          text: 'Начать',
+          href: '#',
+        },
+      },
+    ]}
+  />
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    title="Наши цены прозрачны"
+    subtitle="Преобразите свой автомобиль по доступной цене!"
+    columns={2}
+    items={[
+      {
+        title: 'Детейлинг защищает',
+        description: 'Сохранение первоначального внешнего вида, продлевая срок службы автомобиля.',
+        icon: 'tabler:car-garage',
+      },
+      {
+        title: 'Увеличение стоимости',
+        description: 'Хорошо ухоженный автомобиль всегда привлекательнее для потенциальных покупателей.',
+        icon: 'tabler:mood-dollar',
+      },
+      {
+        title: 'Создание комфорта',
+        description: `Химчистка салона устраняет неприятные запахи и загрязнения, делая поездку более приятной.`,
+        icon: 'tabler:ripple',
+      },
+      {
+        title: 'Защита от коррозии',
+        description: 'Обработка кузова специальными составами предотвращает появление ржавчины.',
+        icon: 'tabler:droplet-off',
+      },
+      {
+        title: 'Экологически чистые материалы',
+        description: 'Мы используем только безопасные для здоровья и окружающей среды средства.',
+        icon: 'tabler:home-eco',
+      },
+      {
+        title: 'Индивидуальный подход',
+        description: 'Мы подберем оптимальный комплекс услуг для вашего автомобиля с учетом ваших пожеланий и бюджета.',
+        icon: 'tabler:key',
+      },
+    ]}
+    classes={{ container: 'max-w-5xl' }}
+  />
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="Ответы на частые вопросы"
+    subtitle="Узнайте, как мы защищаем ваш автомобиль, обеспечиваем безопасность процедур и гарантируем долговременный результат."
+    columns={1}
+    items={[
+      {
+        title: 'Насколько безопасна полировка для лакокрасочного покрытия?',
+        description:
+          'Полировка, проведенная профессионалами с использованием качественных материалов, абсолютно безопасна для вашего автомобиля.',
+      },
+      {
+        title: 'Нужна ли керамическая защита, если я не часто использую машину?',
+        description:
+          'Да, керамическая защита продлевает срок службы вашего автомобиля, даже если вы его не часто используете. Она защищает лакокрасочное покрытие от внешних факторов, таких как ультрафиолет, дорожная грязь и химические реагенты, что особенно важно при долгом стоянии автомобиля на улице.',
+      },
+      {
+        title: 'Сколько времени занимает полная детейлинг-процедура?',
+        description:
+          'Время выполнения зависит от типа работ, но в среднем полная детейлинг-процедура занимает от одного до трех дней.',
+      },
+      {
+        title: 'Не оставят ли химические средства неприятный запах в салоне после чистки?',
+        description:
+          'Мы используем экологически чистые и безопасные для здоровья средства, которые не оставляют неприятных запахов.',
+      },
+      {
+        title: 'Как долго держится результат после керамического покрытия?',
+        description:
+          'В среднем, керамическое покрытие защищает автомобиль на срок от 1 до 3 лет, в зависимости от условий эксплуатации и ухода за автомобилем.',
+      },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <!-- <CallToAction
+    title="Ready to boost your projects?"
+    subtitle="Join our community of satisfied customers who have transformed their work with our templates."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Get started now',
+        href: '/',
+      },
+    ]}
+  /> -->
+</Layout>

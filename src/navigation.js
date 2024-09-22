@@ -7,16 +7,17 @@ export const headerData = {
       href: getPermalink('/'),
     },
     {
+      text: 'Цены',
+      href: getPermalink('/pricing'),
+    },
+    {
       text: 'Блог',
       href: getPermalink('/blog'),
     },
+
     // {
     //   text: 'Услуги',
     //   href: getPermalink('/services'),
-    // },
-    // {
-    //   text: 'Цены',
-    //   href: getPermalink('/pricing'),
     // },
     // {
     //   text: 'Контакты',
@@ -30,6 +31,7 @@ export const footerData = {
     {
       title: 'Блог',
       links: [
+        { text: 'Цены', href: '/pricing' },
         { text: 'Статьи', href: '/blog' },
       ],
     },

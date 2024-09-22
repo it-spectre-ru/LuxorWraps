@@ -19,13 +19,13 @@ metadata:
   openGraph:
     site_name: LuxorWraps
     images:
-      - url: '~/assets/images/default.png'
+      - url: '~/assets/images/default.jpg'
         width: 1200
         height: 628
     type: website
   twitter:
-    handle: '@onwidget'
-    site: '@onwidget'
+    handle: '@LuxorWraps'
+    site: '@LuxorWraps'
     cardType: summary_large_image
 
 i18n:
